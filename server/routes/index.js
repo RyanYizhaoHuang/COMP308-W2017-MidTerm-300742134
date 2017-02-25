@@ -25,7 +25,9 @@ function requireAuth(req, res, next) {
 router.get('/', (req, res, next) => {
   res.render('content/index', {
     title: 'Home',
-    books: ''
+    books: '',
+    messages: req.flash('registerMessage'),
+    displayName: req.user ? req.user.displayName : ''
    });
 });
 

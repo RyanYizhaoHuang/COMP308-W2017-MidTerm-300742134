@@ -38,7 +38,9 @@ router.get('/', requireAuth,(req, res, next) => {
     else {
       res.render('books/index', {
         title: 'Books',
-        books: books
+        books: books,
+        messages: req.flash('loginMessage'),
+        displayName: req.user ? req.user.displayName : ''
       });
     }
   });
