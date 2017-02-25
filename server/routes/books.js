@@ -6,6 +6,8 @@ let mongoose = require('mongoose');
 // define the book model
 let book = require('../models/books');
 
+
+//Display all books
 /* GET books List page. READ */
 router.get('/', (req, res, next) => {
   // find all books in the books collection
@@ -23,6 +25,7 @@ router.get('/', (req, res, next) => {
 
 });
 
+//  Add new book to DB, render adding book page 
 //  GET the Book Details page in order to add a new Book
 router.get('/add', (req, res, next) => {
 
@@ -38,6 +41,7 @@ router.get('/add', (req, res, next) => {
 
 });
 
+// Save new book to DB 
 // POST process the Book Details page and create a new Book - CREATE
 router.post('/add', (req, res, next) => {
 
@@ -52,7 +56,7 @@ router.post('/add', (req, res, next) => {
       "Genre": req.body.genre
     });
 
-    book.create(newBook, (err, game) => {
+    book.create(newBook, (err, book) => {
       if(err) {
         console.log(err);
         res.end(err);
@@ -127,12 +131,25 @@ router.post('/:id', (req, res, next) => {
 
 });
 
-// GET - process the delete by user id
+// Delete the book according to the id 
+// GET - process the delete by book id
 router.get('/delete/:id', (req, res, next) => {
 
     /*****************
      * ADD CODE HERE *
      *****************/
+      // get a reference to the id from the url
+    let id = req.params.id;
+
+    book.remove({_id: id}, (err) => {
+      if(err) {
+        console.log(err);
+        res.end(err);
+      } else {
+        // refresh the books list
+        res.redirect('/books');
+      }
+    });
 });
 
 
