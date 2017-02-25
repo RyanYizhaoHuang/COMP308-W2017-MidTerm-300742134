@@ -1,4 +1,4 @@
-# COMP308-W2017-MidTerm
+# COMP308-W2017-MidTerm-YizhaoHuang-300742134
 
 GitHub Link:https://github.com/RyanYizhaoHuang/COMP308-W2017-MidTerm-300742134
 
