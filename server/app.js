@@ -6,6 +6,7 @@
      * Description: main app javascript to import module and handle routing
 ****************************************************/
 
+
 // modules required for the project
 let express = require('express');
 let path = require('path'); // part of node.js core
