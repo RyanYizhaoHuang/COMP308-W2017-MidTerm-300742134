@@ -1,3 +1,11 @@
+/***************************************************
+     * File: app.js
+     * Author: Yizhao Huang, 
+     * StudentID: 300742134
+     * Web App name: COMP308-W2017-MidTerm-Booklist
+     * Description: main app javascript to import module and handle routing
+****************************************************/
+
 // modules required for the project
 let express = require('express');
 let path = require('path'); // part of node.js core

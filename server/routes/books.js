@@ -1,3 +1,11 @@
+/***************************************************
+     * File: books.js
+     * Author: Yizhao Huang, 
+     * StudentID: 300742134
+     * Web App name: COMP308-W2017-MidTerm-Booklist
+     * Description: books route to handle routing and books functions
+****************************************************/
+
 // modules required for routing
 let express = require('express');
 let router = express.Router();
